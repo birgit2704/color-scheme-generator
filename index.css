@@ -87,17 +87,17 @@ button:hover {
 
 /* to be deleted */
 .red {
-  background-color: red;
+  background-color: #ff0000;
 }
 .blue {
-  background-color: blue;
+  background-color: #0000ff;
 }
 .green {
-  background-color: green;
+  background-color: #00ff00;
 }
-.orange {
-  background-color: orange;
+.yellow {
+  background-color: #ffff00;
 }
-.purple {
-  background-color: purple;
+.violet {
+  background-color: #ff00ff;
 }
