@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Scheme Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <input type="color" name="color" id="color" value="#ff0000" />
+        <select name="select" id="select">
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome-dark">Monochrome-dark</option>
+        </select>
+        <button type="submit">Get color scheme</button>
+      </header>
+
+      <div class="colors-container">
+        <div class="color-container">
+          <div class="color red"></div>
+          <div class="hex-code">hex code1</div>
+        </div>
+        <div class="color-container">
+          <div class="color blue"></div>
+          <div class="hex-code">hex code1</div>
+        </div>
+        <div class="color-container">
+          <div class="color green"></div>
+          <div class="hex-code">hex code1</div>
+        </div>
+        <div class="color-container">
+          <div class="color red"></div>
+          <div class="hex-code">hex code1</div>
+        </div>
+        <div class="color-container">
+          <div class="color purple"></div>
+          <div class="hex-code">hex code1</div>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

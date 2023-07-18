@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1c1c1c;
+  font-family: "Inter", sans-serif;
+}
+
+/* typography */
+select,
+button {
+  font-family: "Inter", sans-serif;
+}
+
+select {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+button,
+.hex-code {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* layout + style */
+main {
+  background-color: #fff;
+  width: 550px;
+  margin: 2rem auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 15px;
+}
+
+input {
+  width: 61px;
+  height: 42px;
+  box-sizing: border-box;
+  border: 0.5px solid #d1d5db;
+  padding: 0;
+}
+
+select {
+  width: 312px;
+  padding-left: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--gray-300, #d1d5db);
+  background: var(--white, #fff);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+button {
+  width: 123px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid var(--gray-300, #d1d5db);
+  background: var(--white, #fff);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+button:hover {
+  background-color: lightgray;
+}
+
+.colors-container {
+  display: flex;
+}
+
+.color-container {
+  width: 100%;
+}
+
+.color {
+  width: 100%;
+  height: 414px;
+}
+
+.hex-code {
+  text-align: center;
+  padding: 11px 0;
+  color: #2b283a;
+}
+
+/* to be deleted */
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.orange {
+  background-color: orange;
+}
+.purple {
+  background-color: purple;
+}
