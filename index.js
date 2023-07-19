@@ -1,5 +1,11 @@
 import schemes from "./schemes.js";
 
+document
+  .getElementById("colors-container")
+  .addEventListener("click", function (e) {
+    copyTextToClipboard(e);
+  });
+
 renderSchemeNamesInOptions();
 
 function renderSchemeNamesInOptions() {
@@ -36,16 +42,24 @@ function renderColorScheme(data) {
     .map(
       (color) => `
                 <div class="color-container">
-                    <div class="color" title="click to copy" style="background-color: ${color}"></div>
-                    <div class="hex-code" title="click to copy">${color}</div>
+                    <div id="${color}" class="color" style="background-color: ${color}"></div>
+                    <div class="hex-code">${color}</div>
                 </div>
                 `
     )
     .join("");
-  document.getElementById("color-container").innerHTML = colorHtml;
+  document.getElementById("colors-container").innerHTML = colorHtml;
 }
 
-// <!-- https://www.thecolorapi.com/docs#schemes -->
-
-// - click hex values/colors to copy to clipboard -->
-// responsive
+function copyTextToClipboard(e) {
+  let copyText = "";
+  if (e.target.classList.value === "hex-code") {
+    copyText = e.target.innerHTML;
+  }
+  if (e.target.classList.value.includes("color")) {
+    copyText = e.target.id;
+  }
+  console.log(copyText);
+  navigator.clipboard.writeText(copyText);
+  alert("Copied the text: " + copyText);
+}
