@@ -36,6 +36,12 @@ header {
   padding: 24px 15px;
 }
 
+.color-input {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
 input {
   width: 61px;
   height: 42px;
@@ -46,11 +52,13 @@ input {
 
 select {
   width: 312px;
-  padding-left: 0.5rem;
+
   border-radius: 6px;
   border: 1px solid var(--gray-300, #d1d5db);
   background: var(--white, #fff);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  align-self: flex-start;
+  padding: 0.5em;
 }
 
 button {
@@ -60,6 +68,8 @@ button {
   border: 1px solid var(--gray-300, #d1d5db);
   background: var(--white, #fff);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  align-self: flex-start;
+  padding: 0.8em;
 }
 
 button:hover {
