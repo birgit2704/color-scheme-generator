@@ -30,6 +30,8 @@ main {
   margin: 2rem auto;
 }
 
+/* HEADER */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -55,7 +57,7 @@ select {
 
   border-radius: 6px;
   border: 1px solid var(--gray-300, #d1d5db);
-  background: var(--white, #fff);
+  background: #fff;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
   align-self: flex-start;
   padding: 0.5em;
@@ -70,10 +72,9 @@ select {
 
 button {
   width: 123px;
-  background-color: #fff;
   border-radius: 4px;
-  border: 1px solid var(--gray-300, #d1d5db);
-  background: var(--white, #fff);
+  border: 1px solid #d1d5db;
+  background: lightgrey;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
   align-self: flex-start;
   padding: 0.85em;
@@ -81,9 +82,10 @@ button {
 }
 
 button:hover {
-  background-color: lightgray;
+  background-color: rgb(176, 175, 175);
 }
 
+/* MAIN */
 .colors-container {
   display: flex;
   cursor: pointer;
@@ -93,54 +95,9 @@ button:hover {
   cursor: pointer;
 }
 
-@media (max-width: 549px) {
-  main {
-    width: 100%;
-  }
-
-  header {
-    flex-direction: column;
-  }
-  .btn-radio-area {
-    flex-direction: row-reverse;
-    justify-content: start;
-    margin-top: 20px;
-  }
-  button {
-    margin-left: 20px;
-  }
-  input[type="radio"] {
-    margin: 10px;
-  }
-  .colors-container {
-    flex-direction: column;
-    overflow: hidden;
-  }
-  .color-container {
-    display: flex;
-    flex-direction: row;
-    height: 60px;
-    width: 100%;
-  }
-  .color {
-    width: 70%;
-    height: 0;
-  }
-  .hex-code {
-    width: 30%;
-
-    box-shadow: 0px 0.5px 1px 0px rgba(0, 0, 0, 0.4);
-  }
-  select,
-  option {
-    font-size: 12px;
-  }
-}
-
 .color-container {
   width: 100%;
 }
-
 .color {
   width: 100%;
   height: 414px;
@@ -152,6 +109,7 @@ button:hover {
   color: #2b283a;
 }
 
+/* Colors for placeholder color-divs */
 .red {
   background-color: #ff0000;
 }
@@ -166,4 +124,59 @@ button:hover {
 }
 .violet {
   background-color: #ff00ff;
+}
+
+@media (max-width: 549px) {
+  main {
+    width: 100%;
+  }
+
+  header {
+    flex-direction: column;
+  }
+  .color-picker-and-select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  select {
+    align-self: center;
+  }
+  .btn-radio-area {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  label {
+    margin-top: 5px;
+  }
+
+  button {
+    margin-left: 20px;
+  }
+
+  .colors-container {
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .color-container {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+  }
+  .color {
+    width: 70%;
+    height: 414px;
+  }
+  .hex-code {
+    width: 30%;
+
+    box-shadow: 0px 0.5px 1px 0px rgba(0, 0, 0, 0.4);
+  }
+  select,
+  option {
+    font-size: 12px;
+  }
 }
