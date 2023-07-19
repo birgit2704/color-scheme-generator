@@ -138,6 +138,7 @@ button:hover {
   }
 
   select {
+    width: 250px;
     align-self: center;
   }
   .btn-radio-area {
