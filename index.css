@@ -141,17 +141,17 @@ button:hover {
     align-self: center;
   }
   .btn-radio-area {
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    /* margin-top: 20px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   label {
     margin-top: 5px;
+    margin-left: 30px;
   }
 
   button {
-    margin-left: 80px;
     margin-bottom: 0;
   }
 
