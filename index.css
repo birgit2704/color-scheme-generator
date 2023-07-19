@@ -89,6 +89,10 @@ button:hover {
   cursor: pointer;
 }
 
+#seed-color-hex {
+  cursor: pointer;
+}
+
 @media (max-width: 549px) {
   main {
     width: 100%;
