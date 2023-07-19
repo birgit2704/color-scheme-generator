@@ -4,7 +4,12 @@ renderSchemeNamesInOptions();
 
 function renderSchemeNamesInOptions() {
   const schemeHtml = schemes
-    .map((scheme) => `<option value="${scheme}">${scheme}</option>`)
+    .map(
+      (scheme) =>
+        `<option value="${scheme}">${
+          scheme.charAt(0).toUpperCase() + scheme.slice(1)
+        }</option>`
+    )
     .join("");
   document.getElementById("select").innerHTML = schemeHtml;
 }
@@ -20,8 +25,9 @@ document.getElementById("btn").addEventListener("click", () => {
 function getQueryUrl() {
   const seedColor = document.querySelector("input").value.slice(1);
   const scheme = document.querySelector("select").value;
+  const numColors = document.querySelector('input[type="radio"]:checked').id;
   document.getElementById("seed-color-hex").textContent = seedColor;
-  return `https://www.thecolorapi.com/scheme?hex=${seedColor}&mode=${scheme}&count=5`;
+  return `https://www.thecolorapi.com/scheme?hex=${seedColor}&mode=${scheme}&count=${numColors}`;
 }
 
 function renderColorScheme(data) {
@@ -30,8 +36,8 @@ function renderColorScheme(data) {
     .map(
       (color) => `
                 <div class="color-container">
-                    <div class="color" style="background-color: ${color}"></div>
-                    <div class="hex-code">${color}</div>
+                    <div class="color" title="click to copy" style="background-color: ${color}"></div>
+                    <div class="hex-code" title="click to copy">${color}</div>
                 </div>
                 `
     )
@@ -43,4 +49,3 @@ function renderColorScheme(data) {
 
 // - click hex values/colors to copy to clipboard -->
 // responsive
-// uppercase first letter

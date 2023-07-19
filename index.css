@@ -42,7 +42,7 @@ header {
   font-size: 12px;
 }
 
-input {
+input[type="color"] {
   width: 61px;
   height: 42px;
   box-sizing: border-box;
@@ -61,6 +61,13 @@ select {
   padding: 0.5em;
 }
 
+.btn-radio-area {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-size: 12px;
+}
+
 button {
   width: 123px;
   background-color: #fff;
@@ -69,7 +76,8 @@ button {
   background: var(--white, #fff);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
   align-self: flex-start;
-  padding: 0.8em;
+  padding: 0.85em;
+  margin-bottom: 1em;
 }
 
 button:hover {
@@ -78,6 +86,50 @@ button:hover {
 
 .colors-container {
   display: flex;
+}
+
+@media (max-width: 549px) {
+  main {
+    width: 100%;
+  }
+
+  header {
+    flex-direction: column;
+  }
+  .btn-radio-area {
+    flex-direction: row-reverse;
+    justify-content: start;
+    margin-top: 20px;
+  }
+  button {
+    margin-left: 20px;
+  }
+  input[type="radio"] {
+    margin: 10px;
+  }
+  .colors-container {
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .color-container {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+  }
+  .color {
+    width: 70%;
+    height: 0;
+  }
+  .hex-code {
+    width: 30%;
+
+    box-shadow: 0px 0.5px 1px 0px rgba(0, 0, 0, 0.4);
+  }
+  select,
+  option {
+    font-size: 12px;
+  }
 }
 
 .color-container {
