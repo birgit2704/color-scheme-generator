@@ -132,14 +132,11 @@ button:hover {
   }
 
   header {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 10px;
   }
-  .color-picker-and-select {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+
   select {
     align-self: center;
   }
@@ -154,7 +151,7 @@ button:hover {
   }
 
   button {
-    margin-left: 20px;
+    margin-left: 180px;
     margin-bottom: 0;
   }
 
